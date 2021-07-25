@@ -22,7 +22,7 @@
     <h1><pre>hi <i id="g"></i></pre></h1>
     <script>
         window.addEventListener("load", function() {
-            var nm = sessionStorage.getItem("user");
+            var nm = localStorage.getItem("user");
             document.getElementById("g").innerHTML = nm;
         })
     </script>

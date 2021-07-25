@@ -99,7 +99,7 @@
             var up = /[A-Z]/g;
             var lp = /[a-z]/g;
             var np = /[0-9]/g;
-            if (up.test(p) == false || lp.test(p) == false || np.test(p) == false) {
+            if (up.test(p) == false || lp.test(p) == false || np.test(p) == false || p.length < 8) {
                 document.getElementById("message").innerHTML = "**invalid password";
                 flag = false;
                 return false;
@@ -114,7 +114,7 @@
             var su = document.getElementById("usd").value;
             var x = su.indexOf("@");
             var y = su.slice(0, x);
-            sessionStorage.setItem("user", y);
+            localStorage.setItem("user", y);
         }
     </script>
 </body>
